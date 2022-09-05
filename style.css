@@ -1,0 +1,341 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gentium Plus', serif;
+}
+
+#myChart {
+    padding: 60px;
+}
+
+.chart {
+    background-color: lightgray;
+}
+
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+h3 {
+    color: black;
+    font-size: 1.5rem;
+  
+}
+
+.headline {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    height: 65px;
+    margin-right: 35px;
+    margin-left: 20px;
+    /* transition: transform 0.7s; */
+}
+
+.main-content{
+    background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%);
+    height: 100vh;
+    min-width: auto;
+}
+
+.first-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.second-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.header-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.header-right a:hover {
+    color: yellow;
+}
+
+.input {
+    padding: 0.7rem;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: lightgray;
+    border: unset;
+    padding: 10px;
+    outline: unset;
+}
+        
+button {
+    padding: 7px;
+    width: 140px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: unset;
+    background: lightgray;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+span {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+/* .image:hover {
+    transform: scale(1.5, 1.5);
+} */
+
+.arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.arrow img {
+  height: 50px;
+}
+
+
+.alignitems {
+    display: flex;
+    align-items: center;
+}
+
+.current-price {
+    color: yellow;
+}
+
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 100%;
+    background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%);
+}
+
+.input-fields input {
+    border: unset;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid lightblue;
+    outline: none;
+}
+
+
+.input-fields span {
+    color: yellow;
+    padding: 5px;
+}
+
+.input-fields img{
+    padding: 20px;
+}
+
+.headline-second {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: yellow;
+
+}
+
+.d-none{
+    display: none;
+}
+
+.headline-third{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 40px;
+}
+
+.main-section{
+    background-color: white;
+}
+
+.whyBitcoin{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 55px;
+}
+.sectionWhyBitcoin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+
+.sectionWhyBitcoin img{
+    height: 150px;
+}
+
+.sectionWhyBitcoin p{
+    text-align: center;
+    color: black;
+}
+
+.container {
+    height: 70vh;
+}
+
+/* .bg-color {
+    background-color: lightgray;
+} */
+
+/* footer teil */
+
+.footer {
+    height: 150px;
+    background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.footer a {
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    color: white;
+} 
+
+.impressum {
+    padding: 50px;
+}
+
+
+
+.info-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 1.4rem; 
+    height: 50vh;
+    align-items: center;
+
+}
+
+h4 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    /* margin-block-start: 0em; */
+    margin-block-end: 0em;
+    /* padding: 20px; */
+    margin-top: 40px;
+}
+
+
+.marginBottom {
+    margin-bottom: 10px;
+}
+
+.border-text-align {
+    /* border-bottom: 2px solid gray; */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+
+}
+
+.datenschutz{
+    padding: 20px;
+}
+
+
+.left {
+    box-shadow: 0 2px 4px rgb(48 47 47 / 50%);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+
+/* From here Responsive for Mobile Devices */ 
+
+@media (max-width: 700px){
+
+    .d-none {
+        display: none;
+    }
+
+    .container {
+        height: unset !important;
+    }
+
+    .info-section {
+        height: unset !important;
+        flex-direction: column;
+    }
+
+    .second-content{
+        flex-direction: column;
+    }
+
+    .arrow {
+        margin-top: unset;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .headline-second{
+        text-align: center;
+    }
+
+    .left {
+        margin: 20px;
+    }
+
+
+
+
+}
