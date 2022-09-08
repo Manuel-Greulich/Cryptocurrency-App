@@ -80,7 +80,7 @@ async function loadPrice(){
             container.innerHTML += `
 
                 <div class="info-section-headline">
-                    <h4 class="stye-headline">Bitcoin Dates & Facts</h4>
+                    <h4 class="style-headline">Bitcoin Dates & Facts</h4>
                 </div>
 
                 <div class="info-section" id="info-section">

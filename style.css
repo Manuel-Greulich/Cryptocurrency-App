@@ -5,6 +5,10 @@ html{
 body {
     margin: 0;
     font-family: 'Gentium Plus', serif;
+    background-image: url('img/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 #myChart {
@@ -52,7 +56,7 @@ h3 {
 }
 
 .main-content{
-    background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%);
+    /* background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%); */
     height: 100vh;
     min-width: auto;
 }
@@ -91,6 +95,7 @@ h3 {
 }
 
 .input {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5 );
     padding: 0.7rem;
     border-radius: 10px;
     margin-right: 20px;
@@ -98,6 +103,7 @@ h3 {
     border: unset;
     padding: 10px;
     outline: unset;
+    cursor: pointer;
 }
         
 button {
@@ -153,7 +159,7 @@ span {
     align-items: center;
     height: 100vh;
     min-width: 100%;
-    background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%);
+    /* background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%); */
 }
 
 .input-fields input {
@@ -186,15 +192,19 @@ span {
 }
 
 .headline-third{
-    color: black;
+    color: white;
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
     padding: 40px;
 }
 
-.main-section{
+/* .main-section{
     background-color: white;
+} */
+
+.style-headline{
+    color: white;
 }
 
 .whyBitcoin{
@@ -208,6 +218,9 @@ span {
     flex-direction: column;
     align-items: center;
     max-width: 250px;
+    box-shadow: inset 0px 0 20px rgb(0 0 0 / 60%), 0 0 20px rgb(16 37 48 / 30%);
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .sectionWhyBitcoin img{
@@ -216,7 +229,7 @@ span {
 
 .sectionWhyBitcoin p{
     text-align: center;
-    color: black;
+    color: white;
 }
 
 .container {
@@ -231,7 +244,7 @@ span {
 
 .footer {
     height: 150px;
-    background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%);
+    background: linear-gradient(110deg, hsl(242deg 83% 11% / 85%) 14%, hsl(242deg 44% 17% / 79%) 80%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -243,6 +256,14 @@ span {
     font-size: 1.2rem;
     color: white;
 } 
+
+.footer-left {
+    margin-left: 40px;
+}
+.footer-left p {
+    color: white;
+    font-size: 12px;
+}
 
 .impressum {
     padding: 50px;
@@ -292,7 +313,8 @@ h4 {
 
 
 .left {
-    box-shadow: 0 2px 4px rgb(48 47 47 / 50%);
+    /* box-shadow: 0 2px 4px rgb(48 47 47 / 50%); */
+    box-shadow: 8px 10px 68px -36px inset;
     padding: 40px;
     border-radius: 20px;
 }
@@ -315,8 +337,14 @@ h4 {
         flex-direction: column;
     }
 
+    .first-content{
+        justify-content: center;
+    }
+    
+
     .second-content{
         flex-direction: column;
+        margin: 20px;
     }
 
     .arrow {
@@ -335,7 +363,25 @@ h4 {
         margin: 20px;
     }
 
+    .sectionWhyBitcoin{
+        margin: 20px;
+    }
 
+    .image {
+        display: none;
+    }
 
+    h1 {
+        display: none;
+    }
 
+    .calender {
+        margin: 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .input {
+        margin-right: 0 !important;
+    }
 }
