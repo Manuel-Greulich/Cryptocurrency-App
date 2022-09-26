@@ -1,140 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cryptocurrency-App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--  chart.js script  -->
-    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="fonts.css">
+
+    <!--  chart.js script  -->
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  </head>
 
+  <body onload=" includeHTML(), loadPrice(), bitcoin()">
 
-</head>
+    <!--------------------------------Main/First Content Section------------------------------------>
 
-
-<body onload=" includeHTML(), loadPrice(), bitcoin()">
-
-     <!--------------------------------Main/First Content Section------------------------------------>
-        
     <div id="gotToTop" class="main-content">
-        <div class="first-content">
-            <div class="header-right">
-                <a href="#whyBitcoin">Why Bitcoin</a> 
-                <a href="./pdf/bitcoin.pdf">Whitepaper</a> 
-                <a href="#inputfields">Converter</a>  
-                <img class="image" src="img/400x400.png" alt="">
-            </div>
-                
-            <div class="headline"><h1>Cryptocurrency-App</h1></div>
-        </div>   
-            
-        <h2>Actually price of Bitcoin in US Dollar</h2>
-        
-        <div class="headline">Bitcoinprice &nbsp <b class="current-price" id="currentPrice"> 60.000&nbspUSD</b>&nbsp USD</div>
-
-
-        <div class="second-content">
-                
-            <div class="calender alignitems">
-
-                <input class="input" required type="date" name="" id="startDate">
-                <span>Start Date</span>
-
-            </div>
-
-            <div class="calender-second alignitems">
-                <input class ="input" required type="date" name="" id="endDate">
-                <span>End Date</span>
-            </div>
-
-            <div><button onclick="getDate()" >Get Price</button></div>
-
-            <!-- <div class="arrow"> 
-                    Klick It
-                <a href="#inputfields"> 
-                <img src="./img/arrow-211-64.png" alt=""></a>
-                
-            </div>  -->
-
-
-        </div>
-        
-        
-        <div class="arrow"> 
-            <h1> Historic Exchange Rates</h1>
-            <a href="#info-section"><img src="./img/arrow-211-64.png" alt=""></a>
-        
+      <div class="first-content">
+        <div class="header-right">
+          <a href="#whyBitcoin">Why Bitcoin</a>
+          <a href="./pdf/bitcoin.pdf">Whitepaper</a>
+          <a href="#inputfields">Converter</a>
+          <img class="image" src="img/400x400.png" alt="" />
         </div>
 
+        <div class="headline"><h1>Cryptocurrency-App</h1></div>
+      </div>
+
+      <h2>Actually price of Bitcoin in US Dollar</h2>
+
+      <div class="headline">
+        Bitcoinprice &nbsp
+        <b class="current-price" id="currentPrice"> 60.000&nbspUSD</b>&nbsp USD
+      </div>
+
+      <div class="second-content">
+        <div class="calender alignitems">
+          <input
+            class="input"
+            required
+            type="date"
+            max="2022-09-16"
+            name=""
+            id="startDate"
+          />
+          <span>Start Date</span>
+        </div>
+
+        <div class="calender-second alignitems">
+          <input
+            class="input"
+            required
+            type="date"
+            max="2022-09-16"
+            name=""
+            id="endDate"
+          />
+          <span>End Date</span>
+        </div>
+
+        <div><button id="btn" onclick="getDate()">Get Price</button></div>
+      </div>
+
+      <div class="arrow">
+        <div class="arrow-headline">Bitcoin Market Information</div>
+        <a href="#info-section"><img src="./img/arrow-211-64.png" alt="" /></a>
+      </div>
     </div>
-
 
     <!--------------------------------Why Bitcoin Section ------------------------------------>
-<div class="main-section">
-    <div id="whyBitcoin" class="headline-third bg-color" >WHY BITCOIN - TOP EIGENSCHAFTEN</div>
 
-    <div class="whyBitcoin bg-color">
-    
+
+    <div class="main-section">
+      <div id="whyBitcoin" class="headline-third bg-color">
+        WHY BITCOIN - TOP EIGENSCHAFTEN
+      </div>
+
+      <div class="whyBitcoin bg-color">
         <div class="sectionWhyBitcoin">
-            <img src="./img/blockchain.png" alt="">
-            <h3>Blockchain</h3>
-            <p>Die Grundlage für Bitcoin bildet die dezentrale Datenbank die Blockchain, verteilte Datenbank die über ein weltweites Netzwerk von Computern repliziert und verteilt wird</p>
+          <img src="./img/blockchain.png" alt="" />
+          <h3>Blockchain</h3>
+          <p>
+            Die Grundlage für Bitcoin bildet die dezentrale Datenbank die
+            Blockchain, verteilte Datenbank die über ein weltweites Netzwerk von
+            Computern repliziert und verteilt wird
+          </p>
         </div>
-    
+
         <div class="sectionWhyBitcoin">
-            <img src="./img/community-leute.png" alt="">
-            <h3>Nodes Community</h3>
-            <p>Bitcoin ist eine digitale Währung, die dezentral funktioniert, du kannst Sie zum Werttransfer sowie zur Wertspeicherung nutzen.</p>
+          <img src="./img/community-leute.png" alt="" />
+          <h3>Nodes Community</h3>
+          <p>
+            Bitcoin ist eine digitale Währung, die dezentral funktioniert, du
+            kannst Sie zum Werttransfer sowie zur Wertspeicherung nutzen.
+          </p>
         </div>
-    
+
         <div class="sectionWhyBitcoin">
-            <img src="./img/proof of work.png" alt="">
-            <h3>Proof Of Work</h3>
-            <p>Bitcoin arbeitet mit dem sogenannten Proof-of-Work-Algorithmus. Es steht dabei für einen Arbeitsnachweis. Das bedeutet, dass die Miner für eine vollrichtete Arbeit eine Belohnung erhalten. Das Gegenteil vom Proof-of-Work Verfahren is Proof-of-Stake, der Einsatznachweis</p>
+          <img src="./img/proof of work.png" alt="" />
+          <h3>Proof Of Work</h3>
+          <p>
+            Bitcoin arbeitet mit dem sogenannten Proof-of-Work-Algorithmus. Es
+            steht dabei für einen Arbeitsnachweis. Das bedeutet, dass die Miner
+            für eine vollrichtete Arbeit eine Belohnung erhalten. Das Gegenteil
+            vom Proof-of-Work Verfahren is Proof-of-Stake, der Einsatznachweis
+          </p>
         </div>
-    
+      </div>
     </div>
-</div>
     <!--------------------------------Canvas Chart Section ------------------------------------>
 
     <div class="chart d-none" id="chart">
-        <canvas id="myChart"></canvas>
+      <canvas id="myChart"></canvas>
     </div>
 
-     <!--------------------------------Calculator Section ------------------------------------>
+    <!--------------------------------Calculator Section ------------------------------------>
 
     <div class="input-fields" id="inputfields">
+      <div class="headline-second">Krypto-Converter BTC/USD</div>
+      <span>USD Dollar</span
+      ><input
+        id="input1"
+        oninput="calculator()"
+        type="number"
+        placeholder="$ USD"
+      />
+      <img src="./img/convert.png" alt="" />
+      <span>BTC</span
+      ><input
+        id="input2"
+        oninput="caluclatorBack()"
+        type="number"
+        placeholder="BTC"
+      />
+    </div>
 
-        <div class="headline-second">Krypto-Converter BTC/USD</div>
-        <span>USD Dollar</span><input id="input1" oninput="calculator()"type="number" placeholder="$ USD">
-        <img src="./img/convert.png" alt="">
-        <span>BTC</span><input id="input2" oninput="caluclatorBack()" type="number" placeholder="BTC"> 
-
-    </div>  
-
-    
-    
     <div id="table" class="table"></div>
 
-    
     <div class="container bg-color" id="container"></div>
-        
-    
+
     <!--------------------------------Footer Section ------------------------------------>
 
-    
     <div class="footer" w3-include-html="templates/footer.html"></div>
-
-
-  
-</body>
+  </body>
 </html>
-
-

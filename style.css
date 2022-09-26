@@ -4,8 +4,8 @@ html{
 
 body {
     margin: 0;
-    font-family: 'Gentium Plus', serif;
-    background-image: url('img/bg3.jpg');
+    font-family: 'Roboto', sans-serif;
+    /* background-image: url('img/bg3.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -22,7 +22,7 @@ body {
 
 h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
 
@@ -32,7 +32,7 @@ h2 {
     color: white;
     display: flex;
     justify-content: center;
-    margin-top: 55px;
+    margin-top: 80px;
 }
 
 h3 {
@@ -46,6 +46,7 @@ h3 {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 }
 
 .image {
@@ -57,15 +58,15 @@ h3 {
 
 .main-content{
     /* background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%); */
+    background: linear-gradient(110deg, hsl(242deg 83% 11% / 85%) 14%, hsl(242deg 44% 17% / 79%) 80%);
     height: 100vh;
     min-width: auto;
 }
 
 .first-content {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem;
 }
 
@@ -73,7 +74,7 @@ h3 {
 .second-content {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 150px;
     align-items: center;
 }
 
@@ -81,6 +82,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+
 }
 
 .header-right a{
@@ -99,20 +102,20 @@ h3 {
     padding: 0.7rem;
     border-radius: 10px;
     margin-right: 20px;
-    background-color: lightgray;
+    background-color: white;
     border: unset;
-    padding: 10px;
+    padding: 20px;
     outline: unset;
     cursor: pointer;
 }
         
 button {
-    padding: 7px;
+    padding: 15px;
     width: 140px;
     font-size: 1.3rem;
     border-radius: 10px;
     border: unset;
-    background: lightgray;
+    background: white;
     cursor: pointer;
 }
 
@@ -135,6 +138,12 @@ span {
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+}
+
+.arrow-headline {
+    font-size: 32px;
+    color: white;
+    padding: 40px;
 }
 
 .arrow img {
@@ -160,6 +169,7 @@ span {
     height: 100vh;
     min-width: 100%;
     /* background: linear-gradient(110deg, hsl(242deg 83% 11%) 14%, hsl(242deg 44% 17%) 80%); */
+    background: linear-gradient(110deg, hsl(242deg 83% 11% / 85%) 14%, hsl(242deg 44% 17% / 79%) 80%);
 }
 
 .input-fields input {
@@ -192,7 +202,6 @@ span {
 }
 
 .headline-third{
-    color: white;
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
@@ -203,9 +212,9 @@ span {
     background-color: white;
 } */
 
-.style-headline{
+/* .style-headline{
     color: white;
-}
+} */
 
 .whyBitcoin{
     display: flex;
@@ -229,7 +238,6 @@ span {
 
 .sectionWhyBitcoin p{
     text-align: center;
-    color: white;
 }
 
 .container {
@@ -243,7 +251,7 @@ span {
 /* footer teil */
 
 .footer {
-    height: 150px;
+    height: 250px;
     background: linear-gradient(110deg, hsl(242deg 83% 11% / 85%) 14%, hsl(242deg 44% 17% / 79%) 80%);
     display: flex;
     justify-content: space-between;
@@ -267,6 +275,7 @@ span {
 
 .impressum {
     padding: 50px;
+    background-color: #808080ad;
 }
 
 
@@ -309,6 +318,7 @@ h4 {
 
 .datenschutz{
     padding: 20px;
+    background-color: #808080ad;
 }
 
 
@@ -375,7 +385,7 @@ h4 {
         display: none;
     }
 
-    .calender {
+    .calender, .calender-second {
         margin: 20px;
         flex-direction: column-reverse;
         justify-content: center;
@@ -383,5 +393,8 @@ h4 {
 
     .input {
         margin-right: 0 !important;
+    }
+    .button {
+        margin-top: 40px;
     }
 }

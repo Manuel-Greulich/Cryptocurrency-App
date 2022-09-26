@@ -80,7 +80,7 @@ async function loadPrice(){
             container.innerHTML += `
 
                 <div class="info-section-headline">
-                    <h4 class="style-headline">Bitcoin Dates & Facts</h4>
+                    <h4 class="style-headline">Bitcoin Market Information</h4>
                 </div>
 
                 <div class="info-section" id="info-section">
@@ -89,8 +89,9 @@ async function loadPrice(){
 
                         <div class="marginBottom"> Market-Cap Rank:  <b>#${myDatas[3]}</b> </div>
                         <div class="marginBottom"> Marketcap: <b>${myDatas[4].toFixed(2)} USD </b></div>
-                        <div class="marginBottom"> Price Change last 24H: <b>${myDatas[5].toFixed(2)} % </b></div>
-                        <div class="marginBottom"> Price Change last 24H: <b>${myDatas[6].toFixed(2)} USD </b></div> 
+                        <div class="marginBottom"> All Time High Price: <b>${myDatas[7].toFixed(2)} USD </b></div>
+                        <div class="marginBottom"> Last Update: <b>${myDatas[2].replace('T', ', ').replace('Z', '').slice(0, -4)}&nbspMEZ </b></div> 
+                       
             
                     </div>
 
@@ -98,8 +99,8 @@ async function loadPrice(){
 
                         <div class="marginBottom"> Cirulation Supply: <b>${myDatas[0]} BTC </b></div>
                         <div class="marginBottom"> Circulation Max: <b>${myDatas[1]} BTC </b></div>
-                        <div class="marginBottom"> All Time High Price: <b>${myDatas[7].toFixed(2)} USD </b></div>
-                        <div class="marginBottom"> Last Update: <b>${myDatas[2].replace('T', ', ').replace('Z', '').slice(0, -4)}&nbspMEZ </b></div> 
+                        <div class="marginBottom"> Price Change last 24H: <b>${myDatas[5].toFixed(2)} % </b></div>
+                        <div class="marginBottom"> Price Change last 24H: <b>${myDatas[6].toFixed(2)} USD </b></div> 
 
                     </div>
                         
@@ -139,14 +140,13 @@ function caluclatorBack(){
 
 
 //#######  ######//
-
 async function getDate(){   
 
-    
     if (myChart != null) {  // != verneinen istnichtgleichnull, myChart hat den Wert null, 
         deleteChart();  
-    }   
+    }
     
+  
     startDate = document.getElementById('startDate').value; 
     endDate = document.getElementById('endDate').value;
     await loadPrice(); 
@@ -159,6 +159,7 @@ async function getDate(){
 
     // buildTable();
     chart();
+
 }
 
 
@@ -252,3 +253,19 @@ function deleteChart(){
     labelsx = [];
     labelsy = [];
 }
+
+$(function(){
+    let dtToday = new Date();
+
+    let month = dtToday.getMonth() + 1;
+    let day = dtToday.getDate();
+    let year = dtToday.getFullYear();
+
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+
+    let maxDate = year + '-' + month + '-' + day;    
+    $('#txtDate').attr('max', maxDate);
+});
